@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestion de Projets</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Application de Gestion de Projets</h1>
+        <nav>
+            <div id="auth-buttons">
+                <button id="login-button">Connexion</button>
+                <button id="register-button">Inscription</button>
+            </div>
+            <button id="logout-button" style="display: none;">Déconnexion</button>
+        </nav>
+    </header>
+    <main>
+        <section id="auth-section">
+            <form id="register-form" style="display: none;">
+                <h2>Inscription</h2>
+                <input type="text" id="register-username" placeholder="Nom d'utilisateur" required>
+                <input type="password" id="register-password" placeholder="Mot de passe" required>
+                <button type="submit">S'inscrire</button>
+            </form>
+            <form id="login-form" style="display: none;">
+                <h2>Connexion</h2>
+                <input type="text" id="login-username" placeholder="Nom d'utilisateur" required>
+                <input type="password" id="login-password" placeholder="Mot de passe" required>
+                <button type="submit">Se connecter</button>
+            </form>
+        </section>
+        <section id="projects-section" style="display: none;">
+            <h2>Mes Projets</h2>
+            <input type="text" id="new-project-name" placeholder="Nom du projet">
+            <button id="add-project-button">Ajouter Projet</button>
+            <ul id="project-list"></ul>
+        </section>
+        <section id="tasks-section" style="display: none;">
+            <h2>Tâches pour le Projet : <span id="current-project-name"></span></h2>
+            <input type="text" id="new-task-name" placeholder="Nom de la tâche">
+            <button id="add-task-button">Ajouter Tâche</button>
+            <ul id="task-list"></ul>
+            <button id="back-to-projects-button">Retour aux Projets</button>
+        </section>
+    </main>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
